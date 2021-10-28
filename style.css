@@ -1,0 +1,27 @@
+body,
+html {
+    background-color: #D9CBAD;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.login_div {
+    box-sizing: border-box;
+    float: none;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 540px;
+    margin: 30px;
+    box-shadow: 2px 2px 2px 2px gray;
+    display: inline-flex;
+    width: 950px;
+}
+
+.login {
+    margin: 5px;
+    margin-right: 10px;
+    height: 530px;
+    border-radius: 20px;
+}
+
+#login {}
