@@ -1,0 +1,21 @@
+body,
+html {
+    height: 100%;
+    margin: 0px;
+    background-image: linear-gradient(to bottom left, #A6D2F7, #DCA6F7, #DCF7A6, #A6F7F5);
+    font-family: arial;
+}
+
+#divmain {
+    padding-top: 50px;
+}
+
+#roomname {
+    font-size: 15px;
+}
+
+.btn-success {
+    font-size: 17px;
+    border-radius: 3px;
+    margin-top: 4px;
+}

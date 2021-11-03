@@ -1,7 +1,7 @@
 body,
 html {
     background-color: #D9CBAD;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
 
 }
@@ -25,20 +25,24 @@ img,
 }
 
 #login {
-    
+
     background-color: #E9E6D0;
     width: 570px;
 }
 
 #username {
     font-family: arial;
-}button{
-font-size: 25px;
-background-color:black;
-border:2px black solid;
-color: white;
-transition-duration: 0.5s;
-}button:hover{
-background-color: white;
-color:black;
+}
+
+button {
+    font-size: 25px;
+    background-color: black;
+    border: 2px black solid;
+    color: white;
+    transition-duration: 0.5s;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
 }

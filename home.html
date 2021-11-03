@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's chat | Home Page</title>
+    <link rel="stylesheet" href="home.css">
+
+    <!--icon css links -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- firebase links -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+</head>
+
+<body id="home" onload="load()">
+    <!-- Logout div -->
+    <div style="text-align: right;">
+        <button style=" font-size:20px; margin: 7px;" onclick="logout()"><i class="fa fa-sign-out" style="font-size: 20px; color: red"></i>Logout</button>
+    </div>
+
+    <!-- Main div including name, add room, join room, etc -->
+    <div id="divmain">
+        <center>
+            <h1 id="hello"></h1>
+            <br><br>
+            <h3>Add room:</h3>
+            <input id="roomname" placeholder="My wonderful room...."><br>
+            <button class="btn-success" onclick="addroom()">Enter</button>
+
+            <br><br><br>
+            <h2>Trending rooms:</h2>
+            <center>
+                <div id="rooms"></div>
+            </center>
+        </center>
+    </div>
+    <script src="home.js"></script>
+
+</body>
+
+</html>
