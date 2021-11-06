@@ -13,13 +13,12 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 
-
 function load() {
     namme = localStorage.getItem("name");
     document.getElementById("hello").innerHTML = "Welcome " + namme + "!";
     code = localStorage.getItem('roomcode');
     document.getElementById('rooms').innerHTML = code;
-    
+
 }
 
 function logout() {
@@ -33,10 +32,20 @@ function addroom() {
         Roomname: roomname
     });
     localStorage.setItem("roomname", roomname);
-    roomss = document.getElementById("rooms").innerHTML;
-    document.getElementById("rooms").innerHTML = roomss + "<br><div style='width:250px; height: 40px; border: 2px black solid; background-color: rgba(255,255,255,0.6);'><h4>" + roomname + "</h4></div>";
-    document.getElementById("roomname").value = "";
-    var roomnameee = document.getElementById("rooms").innerHTML;
-    localStorage.setItem("roomcode", roomnameee);
+    document.getElementById('roomname').value = "";
 }
 
+function getdata() {
+    firebase.database().ref('/').on('value', function (snapshot) {
+        document.getElementById('rooms').innerHTML = "";
+        snapshot.forEach(function (childSnapshot) {
+            childKey = childSnapshot.key;
+            room_names = childKey;
+            console.log("Room Name - " + room_names);
+            row = "<div class='room_name' id='" + room_names + "' onclick='redirect(this.id)'>" + room_names + "</div><hr>";
+            document.getElementById("rooms").innerHTML += row;
+        });
+    });
+}
+
+getdata();

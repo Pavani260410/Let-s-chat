@@ -4,6 +4,7 @@ html {
     margin: 0px;
     background-image: linear-gradient(to bottom left, #A6D2F7, #DCA6F7, #DCF7A6, #A6F7F5);
     font-family: arial;
+    overflow: hidden;
 }
 
 #divmain {
@@ -18,4 +19,12 @@ html {
     font-size: 17px;
     border-radius: 3px;
     margin-top: 4px;
+}
+
+#rooms {
+    width: 350px;
+    max-height: 180px;
+    overflow: auto;
+    white-space: nowrap;
+    border: 1px black solid;
 }
