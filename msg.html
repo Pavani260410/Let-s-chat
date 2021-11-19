@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Let's chat | Home Page</title>
+    <title>Let's chat | Message page</title>
     <link rel="stylesheet" href="home.css">
 
     <!--icon css links -->
@@ -21,30 +21,17 @@
 
 </head>
 
-<body id="home" onload="load()">
+<body id="home">
     <!-- Logout div -->
     <div style="text-align: right;">
         <button style=" font-size:20px; margin: 7px;" onclick="logout()"><i class="fa fa-sign-out" style="font-size: 20px; color: red"></i>Logout</button>
     </div>
 
-    <!-- Main div including name, add room, join room, etc -->
-    <div id="divmain">
-        <center>
-            <h1 id="hello"></h1>
-            <br><br>
-            <h3>Add room:</h3>
-            <input id="roomname" placeholder="My wonderful room...." maxlength="30"><br>
-            <button class="btn-success" onclick="addroom()">Enter</button>
-
-            <br><br>
-            <h2>Trending rooms:</h2>
-            <center id="ctr"><br>
-                <div id="rooms"></div>
-            </center>
-
-        </center>
+    <div style="display:inline-flex; height:50px; width: 100%; padding:7px; background-color:rgba(255,255,255,0.5); position:absolute; margin-top:500px;" class="inputdiv">
+        <center> <label style="margin-top:5px;">Enter a message</label>&nbsp;&nbsp;<input type="text" id="msg" style="width:850px;" placeholder="Message...">&nbsp;&nbsp;<button class="btn btn-success" onclick="send()">Send</button></center>
     </div>
-    <script src="home.js"></script>
+
+    <script src="msg.js"></script>
 
 </body>
 
